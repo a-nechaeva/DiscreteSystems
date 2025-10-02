@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  2 OCT 2025 23:23
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  3 OCT 2025 02:35
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1682,9 +1682,47 @@ Package luatex.def Info: pic/1_trans_min_time.png  used on input line 90.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./ch_2.tex [8<./pic/1_trans_k_3.5.png><./pic/1_trans_k_4.5.png>] [9<./pic/1_t
-rans_min_time.png>]) (./ch_3.tex [10
+rans_min_time.png>] [10
 
-]) (./ch_sum.tex [11
+] [11]
+<pic/2_y_1.png, id=137, 502.9992pt x 290.5254pt>
+File: pic/2_y_1.png Graphic file (type png)
+<use pic/2_y_1.png>
+Package luatex.def Info: pic/2_y_1.png  used on input line 248.
+(luatex.def)             Requested size: 469.47049pt x 271.1744pt.
+ [12]
+<pic/2_y_2.png, id=152, 506.6127pt x 290.2845pt>
+File: pic/2_y_2.png Graphic file (type png)
+<use pic/2_y_2.png>
+Package luatex.def Info: pic/2_y_2.png  used on input line 254.
+(luatex.def)             Requested size: 469.47049pt x 269.00946pt.
+<pic/2_y_3.png, id=153, 506.3718pt x 290.2845pt>
+File: pic/2_y_3.png Graphic file (type png)
+<use pic/2_y_3.png>
+Package luatex.def Info: pic/2_y_3.png  used on input line 261.
+(luatex.def)             Requested size: 469.47049pt x 269.14235pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/2_y_4.png, id=154, 506.3718pt x 290.2845pt>
+File: pic/2_y_4.png Graphic file (type png)
+<use pic/2_y_4.png>
+Package luatex.def Info: pic/2_y_4.png  used on input line 268.
+(luatex.def)             Requested size: 469.47049pt x 269.14235pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/2_y_5.png, id=155, 506.6127pt x 290.5254pt>
+File: pic/2_y_5.png Graphic file (type png)
+<use pic/2_y_5.png>
+Package luatex.def Info: pic/2_y_5.png  used on input line 274.
+(luatex.def)             Requested size: 469.47049pt x 269.23271pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./ch_3.tex [13<./pic/2_y_1.png><./pic/2_y_2.png>] [14<./pic/2_y_3.png><./pic/
+2_y_4.png>] [15<./pic/2_y_5.png>]) (./ch_sum.tex [16
 
 ])
 
@@ -1698,7 +1736,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[12
+[17
 
 ]
 \tf@toc=\write6
@@ -1717,25 +1755,28 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29716 strings out of 476497
+ 29816 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1262 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 15 attribute, 199 glue_spe
-c, 9 attribute_list, 2 write nodes
-   avail lists: 1:3,2:873,3:178,4:58,5:333,6:48,7:2656,8:28,9:316,10:11,11:363
- 51102 multiletter control sequences out of 65536+600000
+ 1538 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 107 attribute, 199 glue_sp
+ec, 55 attribute_list, 2 write nodes
+   avail lists: 1:3,2:989,3:178,4:62,5:333,6:50,7:3590,8:58,9:812,10:11,11:363
+ 51153 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
- 85i,11n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,12n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
 es.ttf><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (12 pages, 756882 bytes).
+cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 0_main.pdf (17 pages, 1073511 bytes).
 
-PDF statistics: 159 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 131072)
+PDF statistics: 232 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 131072)
  33 words of extra memory for PDF output out of 10000 (max. 100000000)
 

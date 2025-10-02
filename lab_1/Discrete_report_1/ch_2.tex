@@ -1,5 +1,280 @@
 \chapter{Исследование устойчивости дискретных систем}
 \label{ch:chap2}
+Рассмотрим непрерывный ОУ, заданный уравнением
+
+\begin{equation}
+	\label{2_sys}
+	\ddot{y} = u,
+\end{equation}
+где $u(t)$ -- управляющее воздействие, $y(t)$ -- выходная величина. Получим модель данной системы в форме вход-состояние-выход. 
+
+Запишем общий вид модели в форме вход-состояние-выход:
+\begin{equation}
+	\begin{cases}
+		\dot{x} = A_H x + B_H u\\
+		y = C x
+	\end{cases}
+\end{equation}
+
+Также запишем передаточную функцию системы (\ref{2_sys}) от $u$ к $y$
+
+\begin{equation}
+	W(p) = \frac{1}{p^2}
+\end{equation}
+
+Теперь запишем формулы приведения к канонической управляемой форме
+
+\begin{equation}
+	A_H = \begin{bmatrix}
+		0 & 1\\
+		-a_0 & -a_1
+	\end{bmatrix}, \, \, 
+	B_H = \begin{bmatrix}
+		0\\ 1
+	\end{bmatrix}, \, \, 
+	C = \begin{bmatrix}
+		b_0 & b_1
+	\end{bmatrix}
+\end{equation}
+
+Тогда для нашей системы получим следующие матрицы формы вход-состояние-выход
+
+\begin{equation}
+	A_H = \begin{bmatrix}
+		0 & 1\\
+		0 & 0
+	\end{bmatrix}, \, \, 
+	B_H = \begin{bmatrix}
+		0\\ 1
+	\end{bmatrix}, \, \, 
+	C = \begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+
+Запишем вход-состояние-выход для дискретной системы
+
+\begin{equation}
+	\begin{cases}
+		x(k+1) = Ax(k) + B u(k)\\
+		y(k) = C x(k)
+	\end{cases}
+\end{equation}
+
+
+Дискретизируем полученную ранее модель с помощью следующих выражений
+
+\begin{equation}
+	\label{2_disc_a}
+	A = \sum \limits_{i=0}^k \frac{A^i_HT^i}{i!} = I + A_HT = \begin{bmatrix}
+		1 & T\\
+		0 & 1
+	\end{bmatrix},
+\end{equation}
+\begin{equation}
+	\label{2_disc_b}
+	B = \sum \limits_{i=1}^k \frac{A^{i-1}_HT^i}{i!}B_H = \left( IT + \frac{1}{2} A_HT^2 \right)B_H = \begin{bmatrix}
+		 0.5T^2\\
+		 T
+	\end{bmatrix}
+\end{equation}
+
+Подставим численное значение $T=0.2$ с и получим следующие матрицы дискретной системы:
+
+\begin{equation}
+	A = \begin{bmatrix}
+		1 & 0.2\\
+		0 & 1
+	\end{bmatrix}, \, \, 
+	B = \begin{bmatrix}
+		0.02\\ 0.2
+	\end{bmatrix}, \, \, 
+	C = \begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+
+
+Теперь зададим управляюшее воздействие в виде
+
+\begin{equation}
+	u(k) = -Kx(k) = - \begin{bmatrix}
+		k_1 & k_2
+	\end{bmatrix} \begin{bmatrix}
+	x_1(k)\\ x_2 (k)
+	\end{bmatrix}
+\end{equation}
+
+и рассчитаем матрицу динамики замкнутой системы 
+\begin{equation}
+	F = A - BK
+\end{equation}
+
+с учетом неизвестных коэффициентов $k_1$ и $k_2$.
+
+\begin{equation}
+	F =  \begin{bmatrix}
+		1 & 0.2\\
+		0 & 1
+	\end{bmatrix} - \begin{bmatrix}
+	0.02\\ 0.2
+	\end{bmatrix}\begin{bmatrix}
+	k_1 & k_2
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		1 - 0.02k_1 & 0.2 - 0.02k_2\\
+		-0.2k_1 & 1-0.2k_2
+	\end{bmatrix}
+\end{equation}
+
+Запишем аналитический вид характеристического полинома
+
+\begin{multline}
+	D(z) = det \{Iz-F\} = (z-1 +0.02k_1)(z - 1 + 0.2k_2) + 0.2k_1(0.2 - 0.02k_2) =\\= z^2 + (- 2 + 0.2k_2 +0.02k_1)z + (-1 +0.02k_1)(- 1 + 0.2k_2)+ 0.2k_1(0.2 - 0.02k_2)=\\=
+	z^2 + (- 2 + 0.2k_2 +0.02k_1)z + 1	-0.02k_1 -  0.2k_2 + 0.004k_1k_2 +\\+
+	0.04k_1-0.004k_1k_2 =\\= z^2 + (- 2 + 0.2k_2 +0.02k_1)z + 1 +0.02k_1-  0.2k_2 = 0
+\end{multline}
+
+Значения неизвестных параметров $k_1$ и $k_2$ будем определять, используя теорему Виета, согласно которой для корней $z_1$ и $z_2$ и коэффициентов $a$, $b$ стандартного вида полинома $z^2 + pz+q=0$ справедливо
+
+\begin{equation}
+	\begin{cases}
+		z_1 + z_2 = -p\\
+		z_1z_2 = q
+	\end{cases} \Rightarrow
+	\begin{cases}
+		z_1 + z_2 = 2 - 0.2k_2 -0.02k_1\\
+		z_1z_2 = 1 +0.02k_1-  0.2k_2
+	\end{cases}
+\end{equation}
+
+
+Теперь для каждого из пяти наборов корней $z_1$, $z_2$ составим пять желаемых характеристических полиномов.
+
+Для $z_1 = 0.2$, $z_2 = 0.8$
+
+\begin{equation}
+D_1(z) =	z^2 -z+0.16
+\end{equation}
+
+\begin{equation}
+	\begin{cases}
+		2 - 0.2k_2 -0.02k_1 = 1\\
+		1 +0.02k_1-  0.2k_2 = 0.16
+	\end{cases} \Rightarrow
+	\begin{cases}
+		k_1 = 4\\
+		k_2 = 4.6
+	\end{cases}
+\end{equation}
+
+
+Для $z_1 = 0.5$, $z_2 = -0.8$
+
+\begin{equation}
+D_2(z) =	z^2 +0.3z-0.4
+\end{equation}
+
+\begin{equation}
+	\begin{cases}
+		2 - 0.2k_2 -0.02k_1 = -0.3\\
+		1 +0.02k_1-  0.2k_2 = -0.4
+	\end{cases} \Rightarrow
+	\begin{cases}
+		k_1 = 22.5\\
+		k_2 = 9.25
+	\end{cases}
+\end{equation}
+
+
+Для $z_1 = 0.1$, $z_2 = -0.3$
+
+\begin{equation}
+D_3(z) =	z^2 +0.2z-0.03
+\end{equation}
+
+\begin{equation}
+	\begin{cases}
+		2 - 0.2k_2 -0.02k_1 = -0.2\\
+		1 +0.02k_1-  0.2k_2 = -0.03
+	\end{cases} \Rightarrow
+	\begin{cases}
+		k_1 = 29.25\\
+		k_2 = 8.075
+	\end{cases}
+\end{equation}
+
+
+Для $z_1 = 0.2j$, $z_2 = -0.2j$
+
+\begin{equation}
+D_4(z) =	z^2 +0.04
+\end{equation}
+
+
+\begin{equation}
+	\begin{cases}
+		2 - 0.2k_2 -0.02k_1 = 0\\
+		1 +0.02k_1-  0.2k_2 = 0.04
+	\end{cases} \Rightarrow
+	\begin{cases}
+		k_1 = 26\\
+		k_2 = 7.4
+	\end{cases}
+\end{equation}
+
+
+Для $z_1 = -0.3+0.7j$, $z_2 = -0.3-0.7j$
+
+\begin{equation}
+D_5(z) =	z^2 +0.6z+0.58
+\end{equation}
+
+
+\begin{equation}
+	\begin{cases}
+		2 - 0.2k_2 -0.02k_1 = -0.6\\
+		1 +0.02k_1-  0.2k_2 = 0.58
+	\end{cases} \Rightarrow
+	\begin{cases}
+		k_1 =54.5 \\
+		k_2 = 7.55
+	\end{cases}
+\end{equation}
+
+Теперь осуществим моделирование полученных систем с начальными условиями $y(0) = 1$, $\dot{y} (0) = 0$. Графики переходных процессов представлены на рисунках \ref{2_y_1}-\ref{2_y_5}.
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_y_1.png}}
+	\caption{График переходного процесса при $z_1 = 0.2$, $z_2 = 0.8$.}
+	\label{2_y_1}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_y_2.png}}
+	\caption{График переходного процесса при $z_1 = 0.5$, $z_2 = -0.8$.}
+	\label{2_y_2}
+\end{figure}
+
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_y_3.png}}
+	\caption{График переходного процесса при $z_1 = 0.1$, $z_2 = -0.3$.}
+	\label{2_y_3}
+\end{figure}
+
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_y_4.png}}
+	\caption{График переходного процесса при $z_{1,2} = \pm 0.2i $.}
+	\label{2_y_4}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_y_5.png}}
+	\caption{График переходного процесса при $z_{1,2} = -0.3 \pm 0.7i $.}
+	\label{2_y_5}
+\end{figure}
 
 
 
