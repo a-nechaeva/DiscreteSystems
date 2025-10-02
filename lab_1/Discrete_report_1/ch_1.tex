@@ -3,14 +3,88 @@
 
 Запишем значения коэффициента передачи ОУ и периода дискретизации согласно варианту: $T = 0.2$ с, $K_{CO} = 4$.
 
-В среде Matlab Simulink реализуем схему (рисунок \ref{}).
+В среде Matlab Simulink реализуем схему (рисунок \ref{1_sch}).
 
-%\begin{figure}[h]
-%\center{\includegraphics[width=1\linewidth]{pic/1_map.png}}
-%\caption{Бинарная карта.}
-%\label{1_map}
-%\end{figure}
+\begin{figure}[h]
+\center{\includegraphics[width=1\linewidth]{pic/1_sch.png}}
+\caption{Схема моделирования.}
+\label{1_sch}
+\end{figure}
 
+
+Путем настройки коэффициента $K_{FB}$ найдем такое его значение, которое соответствует границам устойчивости (нейтральной и колебательной) замкнутой системы. При $K_{FB} = 0$ достигается граница нейтральной устойчивости, при $K_{FB} = 2.5$ достигается граница колебательной устойчивости, графики соответствующих переходных процессов представлены на рисунках \ref{1_trans_1} и \ref{1_trans_2}.
+
+
+\begin{figure}[h]
+ \center{\includegraphics[width=1\linewidth]{pic/1_trans_1.png}}
+ \caption{График переходного процесса при $K_{FB} = 0$.}
+ \label{1_trans_1}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_2.png}}
+	\caption{График переходного процесса при $K_{FB} = 2.5$.}
+	\label{1_trans_2}
+\end{figure}
+
+Рассмотрим влияние экстраполятора нулевого порядка на свойства устойчивости замкнутой системы. Пусть $K_{FB} = 2.5$, то есть система находится на колебательной границе устойчивости, при увеличении периода дискредитации система становится неустойчивой (рисунок \ref{1_trans_zoc_1}). В случае уменьшения периода дискретизации колебания становятся затухающими (рисунок \ref{1_trans_zoc_2}).
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_zoc_1.png}}
+	\caption{График переходного процесса при $K_{FB} = 2.5$ и $T=0.25$ с.}
+	\label{1_trans_zoc_1}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_zoc_2.png}}
+	\caption{График переходного процесса при $K_{FB} = 2.5$ и $T=0.195$ с.}
+	\label{1_trans_zoc_2}
+\end{figure}
+
+\newpage
+Исследуем влияние коэффициента $K_{FB}$ на колебательность процесса. Зададимся следующими значениями $K_{FB} = -0.5; 0.5;1.5; 2.5; 3.5; 4.5$ и построим графики переходных процессов (рисунки \ref{1_trans_k_-0.5}-\ref{1_trans_k_4.5}). При выходе коэффициента $K_{FB}$ за границы $[0; 2.5]$ система становится неустойчивой. Максимальная колебательность соответствует $K_{FB}=2.5$, а отсутствие колебаний $K_{FB}=0$.
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_-0.5.png}}
+	\caption{График переходного процесса при $K_{FB} = -0.5$}
+	\label{1_trans_k_-0.5}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_0.5.png}}
+	\caption{График переходного процесса при $K_{FB} = 0.5$}
+	\label{1_trans_k_0.5}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_1.5.png}}
+	\caption{График переходного процесса при $K_{FB} = 1.5$}
+	\label{1_trans_k_1.5}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_2.5.png}}
+	\caption{График переходного процесса при $K_{FB} = 2.5$}
+	\label{1_trans_k_2.5}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_3.5.png}}
+	\caption{График переходного процесса при $K_{FB} = 3.5$}
+	\label{1_trans_k_3.5}
+\end{figure}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_trans_k_4.5.png}}
+	\caption{График переходного процесса при $K_{FB} = 4.5$}
+	\label{1_trans_k_4.5}
+\end{figure}
+
+
+\newpage
+,
+\newpage
+Путем настройки найдем значение коэффициента $K_{FB}$, соответствующее оптимальному по быстродействию процессу.
 
 
 
