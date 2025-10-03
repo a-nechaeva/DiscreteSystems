@@ -1,6 +1,90 @@
 \chapter{Построение дискретных командных генераторов}
 \label{ch:chap3}
 
+Синтезируем командный генератор гармонического сигнала вида 
+\begin{equation}
+	g(k) = A \sin (kT\omega),
+\end{equation}
 
+где $T=0.2$ с, $A=1$, $\omega =0.08$.
+
+Дискретная модель внешнего воздействия описывается в пространстве состояний системой разностных уравнений
+
+\begin{equation}
+	\begin{cases}
+		\xi (k+1) = \Gamma_d \xi (k),\\
+		g(k) = H \xi (k),
+	\end{cases}
+\end{equation}
+
+где $\xi(k)$ -- n-мерный вектор состояния дискретного командного генератора, $g(k)$ -- дискретное внешнее воздействие, $\Gamma$ -- матрица динамики дискретного генератора размерности $n \times n$, $H$ -- матрица выходов дискретного генератора размерности $1 \times n$.
+
+Выберем в качестве первой координаты вектора состояния дискретного генератора сам сигнал:
+
+\begin{equation}
+	\xi_1(k) = g(k)
+\end{equation}
+
+Вычислим первую разность
+
+\begin{multline}
+	g(k+1) = A \sin ((k+1)T\omega) =  A \sin (kT\omega) \cos (T\omega) + A \cos(kT\omega) \sin(T\omega)=\\=
+	g(k) \cos (T\omega) + A \cos(kT\omega) \sin(T\omega)
+\end{multline}
+сразу выразим
+
+\begin{equation}
+	 A \cos(kT\omega) = \frac{g(k+1)-g(k) \cos (T\omega)}{\sin(T\omega)}
+\end{equation}
+
+Перейдем ко второй разности
+
+\begin{multline}
+	g(k+2) = g(k+1) \cos (T \omega) + \sin (T \omega) \left(A \sin(kT\omega) \sin(T\omega)+A \cos(kT\omega) \cos(T\omega) \right)=\\=
+	2g(k+1) \cos(T\omega) - g(k)
+\end{multline}
+
+Вектор состояния запишем как
+
+\begin{equation}
+	\begin{cases}
+		\xi_1 (k) = g(k)\\
+		\xi_2(k) = \xi_1(k+1) +g(k+1)\\
+		\xi_3(k) = \xi_2(k+1) + g(k+2)
+	\end{cases}
+\end{equation}
+
+Запишем модель в пространстве состояний
+
+\begin{equation}
+	\begin{cases}
+		\begin{bmatrix}
+			\xi_1 (k+1)\\
+			\xi_2(k+1)
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1\\
+			-1 & 2 \cos(T\omega)
+		\end{bmatrix}	\begin{bmatrix}
+		\xi_1 (k)\\
+		\xi_2(k)
+		\end{bmatrix}\\
+		g(k) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix}
+			\begin{bmatrix}
+			\xi_1 (k)\\
+			\xi_2(k)
+		\end{bmatrix}
+	\end{cases}
+\end{equation}
+
+Начальные условия запишем в виде
+\begin{equation}
+	\begin{cases}
+		\xi_1(0) = A \sin (0) = 0\\
+		\xi_2 (0) = A \sin(0) \cos(T \omega) + A \cos(0) \sin(T\omega) = A \sin (T \omega)
+	\end{cases}
+\end{equation}
 
 \endinput
