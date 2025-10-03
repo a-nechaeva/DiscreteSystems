@@ -40,7 +40,7 @@
 Перейдем ко второй разности
 
 \begin{multline}
-	g(k+2) = g(k+1) \cos (T \omega) + \sin (T \omega) \left(A \sin(kT\omega) \sin(T\omega)+A \cos(kT\omega) \cos(T\omega) \right)=\\=
+	g(k+2) = g(k+1) \cos (T \omega) + \sin (T \omega) \cdot \\ \cdot \left(A \sin(kT\omega) \sin(T\omega)+A \cos(kT\omega) \cos(T\omega) \right)=
 	2g(k+1) \cos(T\omega) - g(k)
 \end{multline}
 
@@ -86,5 +86,230 @@
 		\xi_2 (0) = A \sin(0) \cos(T \omega) + A \cos(0) \sin(T\omega) = A \sin (T \omega)
 	\end{cases}
 \end{equation}
+
+
+Подставим численные значения и получим
+
+Запишем модель в пространстве состояний
+
+\begin{equation}
+	\begin{cases}
+		\begin{bmatrix}
+			\xi_1 (k+1)\\
+			\xi_2(k+1)
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1\\
+			-1 & 2 \cos(0.016)
+		\end{bmatrix}	\begin{bmatrix}
+			\xi_1 (k)\\
+			\xi_2(k)
+		\end{bmatrix}\\
+		g(k) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix}
+		\begin{bmatrix}
+			\xi_1 (k)\\
+			\xi_2(k)
+		\end{bmatrix}
+	\end{cases}
+\end{equation}
+
+Начальные условия запишем в виде
+\begin{equation}
+	\begin{cases}
+		\xi_1(0) = A \sin (0) = 0\\
+		\xi_2 (0) = A \sin(0) \cos(T \omega) + A \cos(0) \sin(T\omega) =  \sin (0.016)
+	\end{cases}
+\end{equation}
+
+
+
+Соберем схему моделирования дискретного генератора (рисунок \ref{3_schem_1}) и получим график сигнала $g(k)$ (рисунок \ref{3_1_g}).
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_schem_1.png}}
+	\caption{Схема моделирования дискретного генератора.}
+	\label{3_schem_1}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_1_g.png}}
+	\caption{График сигнала $g(k)$.}
+	\label{3_1_g}
+\end{figure}
+
+\newpage
+
+Теперь синтезируем дискретную математическую модель вход-состояние-выход, если период дискретизации $T=0.25$ с, а внешнее возмущение задано следующим выражением
+
+\begin{equation}
+	g(k) = 2 e^{-kT} \sin (3kT) + 0.1(kT)^2
+\end{equation}
+
+Заметим, что $g(k)$ можно представить в виде суммы компонент $g_1(k)=2 e^{-kT} \sin (3kT) $ и $g_2(k)=0.1(kT)^2$.
+
+Найдем первую разность для $g_1(k)=2 e^{-kT} \sin (3kT) $
+
+\begin{multline}
+	g_1(k+1)=2 e^{-(k+1)T} \sin (3(k+1)T) = \\=
+	2 e^{-kT}e^{-T} (\sin (3kT) \cos(3T) + \sin(3T)\cos(3kT))=\\=
+	2 e^{-kT}e^{-T}\sin (3kT) \cos(3T) + 2 e^{-kT}e^{-T}\sin(3T)\cos(3kT)=\\=
+	g_1(k)e^{-T} \cos(3T) + 2 e^{-kT}e^{-T}\sin(3T)\cos(3kT)
+\end{multline}
+
+Также заметим, что
+
+\begin{equation}
+	2e^{-kT} \cos(3kT) = \frac{g_1(k+1)-g_1(k)e^{-T} \cos(3T)}{e^{-T}\sin (3T)}
+\end{equation}
+
+
+Теперь найдем вторую разность
+
+\begin{multline}
+	g_1(k+2) = g_1(k+1) e^{-T} \cos(3T) + e^{-T} \sin(3T) \cdot \\ \cdot
+	\left( 2e^{-kT}\cos(3kT) \cos(3T)-2e^{-kT}\sin (3kT) \sin (3T)\right)
+\end{multline}
+
+Упростим и получим
+
+\begin{equation}
+	g_1(k+2)= 2g_1(k+1)e^{-T}\cos (3T)-e^{-T}g_1(k)
+\end{equation}
+
+Запишем вектор состояния
+
+\begin{equation}
+	\begin{cases}
+		\xi_{11}(k) = g_1(k)\\
+		\xi_{12}(k)= \xi_{11}(k+1) = g_1(k+1)\\
+		\xi_{13} (k) = \xi_{12}(k+1) = g_1(k+2)
+	\end{cases}
+\end{equation}
+
+Перейдем к модели в пространстве состояний
+
+\begin{equation}
+	\begin{cases}
+	\begin{bmatrix}
+		\xi_{11}(k+1)\\
+		\xi_{12}(k+1)
+	\end{bmatrix}=
+	\begin{bmatrix}
+		0 & 1\\
+		-e^{-T} & 2e^{-T}\cos(3T)
+	\end{bmatrix}
+		\begin{bmatrix}
+		\xi_{11}(k)\\
+		\xi_{12}(k)
+	\end{bmatrix}\\
+	g_1(k) =
+		\begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+		\begin{bmatrix}
+		\xi_{11}(k)\\
+		\xi_{12}(k)
+	\end{bmatrix}
+	\end{cases}
+\end{equation}
+
+Начальные условия
+
+\begin{equation}
+	\begin{cases}
+		\xi_{11}(0) = 0\\
+		\xi_{12}(0) = 2g_1(k+1)e^{-T}\cos (3T)-e^Tg_1(k) = 2 \sin (3T)
+	\end{cases}
+\end{equation}
+
+Аналогично найдем соответствующую модель для $g_2(k)=0.1(kT)^2$
+\begin{equation}
+	 0.1((k+1)T)^2 = 0.1(kT)^2 + 0.2kT^2+0.1T^2
+\end{equation}
+
+\begin{equation}
+	0.1(kT + 2T)^2 = 0.1(kT)^2 + 0.4kT^2+0.4T^2
+\end{equation}
+
+\begin{equation}
+	\begin{cases}
+		\xi_{21}(k) = g_2(k)=0.1(kT)^2\\
+		\xi_{22}(k) =\xi_{21}(k+1) = \xi_{21}(k) + 0.2kT^2+0.1T^2\\
+		\xi_{23}(k) = \xi_{22}(k+1) = 2\xi_{22}(k) - \xi_{21}+0.2T^2\\
+		\xi_{24}(k) = \xi_{23}(k+1) = 3\xi_{22}(k) -2\xi_1(k) + 0.6T^2 = 
+		-3\xi_{22}+\xi_{21}(k) + 3 \xi_{23}
+	\end{cases}
+\end{equation}
+
+
+\begin{equation}
+	\begin{cases}
+\begin{bmatrix}
+	\xi_{21}(k+1)\\
+	\xi_{22}(k+1)
+	\xi_{23}(k+1)
+\end{bmatrix}=
+\begin{bmatrix}
+	0 & 1 & 0\\
+	0 & 0 & 1\\
+	1 & -3 & 3
+\end{bmatrix}
+\begin{bmatrix}
+	\xi_{21}(k)\\
+	\xi_{22}(k)
+	\xi_{23}(k)
+\end{bmatrix}\\
+g_2(k) =
+\begin{bmatrix}
+	1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+	\xi_{21}(k)\\
+	\xi_{22}(k)\\
+	\xi_{23}(k)
+\end{bmatrix}
+\end{cases}
+\end{equation}
+
+Начальные условия
+
+\begin{equation}
+	\begin{cases}
+		\xi_{21}(0) = 0\\
+		\xi_{22}(0) = 0.1T^2\\
+		\xi_{23}(0) = 0.3T^2
+	\end{cases}
+\end{equation}
+
+
+Соберем схему моделирования дискретного генератора (рисунок \ref{3_schem_2}) и построим график сигнала $g(k)$ (рисунки \ref{3_2_g} и \ref{3_2_g2})
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_schem_2.png}}
+	\caption{Схема моделирования дискретного генератора.}
+	\label{3_schem_2}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_2_g.png}}
+	\caption{График сигнала $g(k)$.}
+	\label{3_2_g}
+\end{figure}
+
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_2_g2.png}}
+	\caption{График сигнала $g(k)$ при большем времени моделирования.}
+	\label{3_2_g2}
+\end{figure}
+
+
+
 
 \endinput

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  3 OCT 2025 03:16
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  3 OCT 2025 21:36
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1722,17 +1722,60 @@ Package luatex.def Info: pic/2_y_5.png  used on input line 274.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./ch_3.tex [13<./pic/2_y_1.png><./pic/2_y_2.png>] [14<./pic/2_y_3.png><./pic/
-2_y_4.png>] [15<./pic/2_y_5.png>]
-Overfull \hbox (43.98285pt too wide) detected at line 45
- []$[]  \OML/cmm/m/it/14.4 g\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 k \OT1/cmr/m/
-n/14.4 + 2) = \OML/cmm/m/it/14.4 g\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 k \OT1/
-cmr/m/n/14.4 + 1) [](\OML/cmm/m/it/14.4 T!\OT1/cmr/m/n/14.4 ) + [](\OML/cmm/m/i
-t/14.4 T!\OT1/cmr/m/n/14.4 ) [] =$ 
+2_y_4.png>] [15<./pic/2_y_5.png>] [16
+
+]
+<pic/3_schem_1.png, id=187, 604.659pt x 169.8345pt>
+File: pic/3_schem_1.png Graphic file (type png)
+<use pic/3_schem_1.png>
+Package luatex.def Info: pic/3_schem_1.png  used on input line 131.
+(luatex.def)             Requested size: 469.47049pt x 131.86137pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_1_g.png, id=188, 511.9125pt x 288.3573pt>
+File: pic/3_1_g.png Graphic file (type png)
+<use pic/3_1_g.png>
+Package luatex.def Info: pic/3_1_g.png  used on input line 139.
+(luatex.def)             Requested size: 469.47049pt x 264.45152pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+[]\TU/TimesNewRoman(0)/m/n/14.4 Те-перь син-те-зи-ру-ем ди
+с-крет-ную ма-те-ма-ти-че-скую мо-дель вход-
  []
 
-[16
+[18<./pic/3_schem_1.png><./pic/3_1_g.png>] [19]
+<pic/3_schem_2.png, id=220, 526.96875pt x 271.61475pt>
+File: pic/3_schem_2.png Graphic file (type png)
+<use pic/3_schem_2.png>
+Package luatex.def Info: pic/3_schem_2.png  used on input line 292.
+(luatex.def)             Requested size: 469.47049pt x 241.98917pt.
 
-]) (./ch_sum.tex [17])
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_2_g.png, id=221, 501.072pt x 288.3573pt>
+File: pic/3_2_g.png Graphic file (type png)
+<use pic/3_2_g.png>
+Package luatex.def Info: pic/3_2_g.png  used on input line 300.
+(luatex.def)             Requested size: 469.47049pt x 270.1715pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_2_g2.png, id=222, 503.481pt x 288.1164pt>
+File: pic/3_2_g2.png Graphic file (type png)
+<use pic/3_2_g2.png>
+Package luatex.def Info: pic/3_2_g2.png  used on input line 307.
+(luatex.def)             Requested size: 469.47049pt x 268.65767pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./ch_sum.tex [20] [21<./pic/3_schem_2.png><./pic/3_2_g.png>] [22<./pic/3_2_g2
+.png>])
 
 LaTeX Warning: Empty bibliography on input line 190.
 
@@ -1744,7 +1787,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[18
+[23
 
 ]
 \tf@toc=\write6
@@ -1763,13 +1806,13 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29826 strings out of 476497
+ 29906 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1616 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 133 attribute, 199 glue_sp
-ec, 68 attribute_list, 2 write nodes
-   avail lists: 1:3,2:950,3:178,4:62,5:495,6:50,7:3590,8:72,9:812,10:11,11:363
- 51153 multiletter control sequences out of 65536+600000
+ 1778 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 187 attribute, 199 glue_sp
+ec, 95 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1063,3:178,4:62,5:497,6:50,7:3590,8:63,9:829,10:11,11:363
+ 51193 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
  85i,13n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
@@ -1782,9 +1825,9 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (18 pages, 1082861 bytes).
+Output written on 0_main.pdf (23 pages, 1297214 bytes).
 
-PDF statistics: 246 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 131072)
+PDF statistics: 300 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 131072)
  33 words of extra memory for PDF output out of 10000 (max. 100000000)
 
