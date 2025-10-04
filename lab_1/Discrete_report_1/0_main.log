@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  4 OCT 2025 12:07
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  4 OCT 2025 13:06
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1600,11 +1600,11 @@ Package luatex.def Info: pic/1_trans_1.png  used on input line 43.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/1_trans_2.png, id=43, 509.2626pt x 290.2845pt>
+<pic/1_trans_2.png, id=43, 505.89pt x 290.5254pt>
 File: pic/1_trans_2.png Graphic file (type png)
 <use pic/1_trans_2.png>
 Package luatex.def Info: pic/1_trans_2.png  used on input line 49.
-(luatex.def)             Requested size: 469.47049pt x 267.60536pt.
+(luatex.def)             Requested size: 469.47049pt x 269.61397pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1660,11 +1660,11 @@ Package luatex.def Info: pic/1_trans_k_3.5.png  used on input line 96.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/1_trans_k_4.5.png, id=84, 509.2626pt x 290.5254pt>
+<pic/1_trans_k_4.5.png, id=84, 501.072pt x 290.5254pt>
 File: pic/1_trans_k_4.5.png Graphic file (type png)
 <use pic/1_trans_k_4.5.png>
 Package luatex.def Info: pic/1_trans_k_4.5.png  used on input line 102.
-(luatex.def)             Requested size: 469.47049pt x 267.82744pt.
+(luatex.def)             Requested size: 469.47049pt x 272.20287pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1823,7 +1823,7 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (23 pages, 1301601 bytes).
+Output written on 0_main.pdf (23 pages, 1319124 bytes).
 
 PDF statistics: 306 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 131072)
