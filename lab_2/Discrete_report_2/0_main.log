@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 16:34
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 18:24
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1664,9 +1664,9 @@ Package luatex.def Info: pic/2_gy.png  used on input line 231.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./ch_3.tex [10] [11<./pic/2_schem.png><./pic/2_y.png>] [12<./pic/2_e.png><./p
-ic/2_gy.png>]) (./ch_sum.tex [13
+ic/2_gy.png>] [13
 
-])
+] [14]) (./ch_sum.tex [15])
 
 LaTeX Warning: Empty bibliography on input line 190.
 
@@ -1678,7 +1678,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[14
+[16
 
 ]
 \tf@toc=\write6
@@ -1697,15 +1697,15 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29735 strings out of 476497
+ 29749 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1699 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 159 attribute, 200 glue_sp
-ec, 81 attribute_list, 2 write nodes
-   avail lists: 1:3,2:1366,3:196,4:60,5:501,6:48,7:4231,8:53,9:880,10:9,11:421
- 51093 multiletter control sequences out of 65536+600000
+ 1825 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 201 attribute, 200 glue_sp
+ec, 102 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1303,3:196,4:60,5:501,6:48,7:4231,8:72,9:880,10:15,11:464
+ 51095 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
- 85i,12n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,15n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
 es.ttf><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -1715,9 +1715,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (14 pages, 635797 bytes).
+Output written on 0_main.pdf (16 pages, 648285 bytes).
 
-PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 131072)
+PDF statistics: 242 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 131072)
  49 words of extra memory for PDF output out of 10000 (max. 100000000)
 

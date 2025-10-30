@@ -1,6 +1,119 @@
 \chapter{Построение регуляторов для объектов с неполной информацией}
 \label{ch:chap3}
+Синтезируем устройство оценки вектора состояния для ОУ (\ref{1_d_oc}). Будем строить динамический регулятор с устройством оценки пониженной размерности по следующим уравнениям движения замкнутой системы:
+\begin{equation}
+	\begin{cases}
+		\hat{z} (m+1) = F_\text{н} \hat{z} (m) + G y_\text{и} (m) + M_\text{н} Bu(m), & \hat{z}(0) = 0\\
+		\hat{x}(m) = \begin{bmatrix}
+			C_\text{и}\\ M_\text{н}
+		\end{bmatrix}^{-1} \begin{bmatrix}
+		y_\text{и} (m)\\ \hat{z} (m)
+		\end{bmatrix}\\
+		u(m) = -K \hat{x} (m)
+	\end{cases}
+\end{equation}
+где $\hat{z} \in R^{n - 1}$ -- вектор состояния устройства оценки пониженной размерности; $\hat{x}(m) \in R^n$ -- вектор оценки состояния ОУ; $F_\text{н}$ -- матрица динамики устройства оценки размерности $(n - 1) \times (n - 1)$; $G$ -- матрица входов устройства оценки размерности $(n - 1) \times 1$; $M_\text{н}$ -- матрица линейных преобразований размерности $(n - 1) \times n$, согласующая размерности векторов состояния ОУ и устройства оценки; $K$ -- матрица коэффициентов размерности $k \times n$.
 
+Задача синтеза динамического регулятора с устройством оценки пониженной размерности заключается в выборе таких матриц описания устройства оуенки $F_\text{н}$ и $G$, а также матрицы преобразования $M_\text{н}$ и матрицы обратных связей $K$, которые обеспечивают замкнутой системе желаемые динамические свойства.
+
+Рассмотрим свойства замкнутой системы с законом управления:
+\begin{equation}
+	u(m) = -K \hat{x} (m) = -K \begin{bmatrix}
+		C_\text{и}\\ M_\text{н}
+	\end{bmatrix}^{-1} \begin{bmatrix}
+	y_\text{и} (m)\\ \hat{z} (m)
+\end{bmatrix} = - \begin{bmatrix}
+E & D
+\end{bmatrix}\begin{bmatrix}
+y_\text{и} (m)\\ \hat{z} (m)
+\end{bmatrix},
+\end{equation}
+где введена блочная матрица
+\begin{equation*}
+\begin{bmatrix}
+	E & D
+\end{bmatrix} = K \begin{bmatrix}
+C_\text{и}\\ M_\text{н}
+\end{bmatrix}^{-1},
+\end{equation*}
+определяющая матрицу коэффициентов пропорционального регулятора, то есть
+\begin{equation*}
+\begin{bmatrix}
+	E & D
+\end{bmatrix} \begin{bmatrix}
+C_\text{и}\\ M_\text{н}
+\end{bmatrix} = K,
+\end{equation*}
+или $K = EC_\text{и} + DM_\text{н}$, причем матрица $E$ имеет размерность $k \times 1$, а матрица $D$ имеет размерность $k \times (n - 1)$.
+
+Запишем уравнение движения замкнутой системы, объединив уравнения движения объекта и динамического регулятора:
+\begin{equation}
+	\begin{cases}
+		x(m + 1) = Ax(m) + bu(m)\\
+		y_\text{и}(m) = C_\text{и}x(m)\\
+		\hat{z}(m + 1) = F_\text{н} \hat{z} (m) + G y_\text{и} (m) + M_\text{н}Bu(m) \\
+		u(m) = -Ey_\text{и}(m) - D \hat{z} (m)
+	\end{cases}
+\end{equation}
+Вычтем из уравнения движения устройства оценки уравнение движения объекта, слева умноженное на матрицу преобразования $M_\text{н}$ с учетом равенства $M_\text{н}A - F_\text{н}M_\text{н}= G C_\text{и}$:
+\begin{equation}
+	\hat{z}(m+1) = F_\text{н} \hat{z} (m) + \left(G C_\text{и}-M_\text{н}A\right) x(m) = F_\text{н} \left(\hat{z}(m) - M_\text{н} x(m)\right)
+\end{equation}
+
+Введем в рассмотрение вектор невязки в виде $\tilde{z}(m) = \hat{z}(m) - Mx(m)$. Тогда для замкнутой системы справедливы следующие равенства
+\begin{equation}
+	\begin{cases}
+		x(m+1) = Ax(m) + Bu(m)\\
+		\tilde{z} (m+1) = F_\text{н} \tilde{z} (m) \\
+		u(m) = -E C_\text{и} x(m) - D \tilde{z} (m)
+	\end{cases}
+\end{equation}
+С учетом $F = A - BK$ можно записать
+\begin{equation}
+	\begin{cases}
+		x(m+1) = Fx(m) - BD \tilde{z} (m)\\
+		\tilde{z} (m+1) = F_\text{н} \tilde{z} (m) 
+	\end{cases}
+\end{equation}
+Запишем уравнение движения системы в блочной матричной форме:
+\begin{equation}
+	\begin{bmatrix}
+		x(m+1)\\
+		\tilde{z} (m+1)
+\end{bmatrix} = \begin{bmatrix}
+F & -BD\\
+0 & F_\text{н}
+\end{bmatrix}
+	\begin{bmatrix}
+	x(m)\\
+	\tilde{z} (m)
+\end{bmatrix} = \overline{F}
+	\begin{bmatrix}
+	x(m)\\
+	\tilde{z} (m)
+\end{bmatrix}
+\end{equation}
+где $\overline{F}$ -- матрица динамики замкнутой системы. Из верхнетреугольного вида матрицы $\overline{F}$ следует, что характеристическое уравнение замкнутой системы определяется произведением характеристических уравнений матриц $F$ и $F_\text{н}$, а собственные числа замкнутой системы есть объединение корней характеристических уравнений матриц $F$ и $F_\text{н}$, то есть
+\begin{equation}
+	det \left(\overline{F} - zI_{(2n-1) \times (2n-1)}\right) = det \left(F-zI_{n \times n}\right) det \left(F_\text{н} - zI_{(n-1) \times (n-1)}\right)
+\end{equation}
+Так как нам нужна оптимальная по быстродействию система, то
+\begin{equation}
+	F_\text{н} = \begin{bmatrix}
+		0 & 1\\ 0 & 0
+	\end{bmatrix}, \, \, 
+	G = \begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+Заметим, что пара $\left(F_\text{н}, G\right)$ полностью управляема.
+
+Решим уравнение Сильвестра относительно $M_\text{н}$:
+\begin{equation}
+	M_\text{н}A - F_\text{н}M_\text{н}= G C_\text{и} \Rightarrow
+	M_\text{н} = \begin{bmatrix}
+	\end{bmatrix}
+\end{equation}
 
 
 
