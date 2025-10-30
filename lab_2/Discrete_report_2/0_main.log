@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 00:51
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 03:03
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1598,17 +1598,17 @@ Package luatex.def Info: pic/1_schem.png  used on input line 8.
 <pic/1_1_schem.png, id=78, 833.514pt x 249.93375pt>
 File: pic/1_1_schem.png Graphic file (type png)
 <use pic/1_1_schem.png>
-Package luatex.def Info: pic/1_1_schem.png  used on input line 151.
+Package luatex.def Info: pic/1_1_schem.png  used on input line 154.
 (luatex.def)             Requested size: 469.47049pt x 140.77425pt.
 <pic/1_x.png, id=82, 509.2626pt x 290.2845pt>
 File: pic/1_x.png Graphic file (type png)
 <use pic/1_x.png>
-Package luatex.def Info: pic/1_x.png  used on input line 158.
+Package luatex.def Info: pic/1_x.png  used on input line 161.
 (luatex.def)             Requested size: 469.47049pt x 267.60536pt.
 <pic/1_y.png, id=83, 516.9714pt x 290.2845pt>
 File: pic/1_y.png Graphic file (type png)
 <use pic/1_y.png>
-Package luatex.def Info: pic/1_y.png  used on input line 163.
+Package luatex.def Info: pic/1_y.png  used on input line 166.
 (luatex.def)             Requested size: 469.47049pt x 263.61006pt.
 
 
@@ -1617,10 +1617,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./ch_2.tex [5<./pic/1_1_schem.png>] [6<./pic/1_x.png><./pic/1_y.png>])
-(./ch_3.tex [7
+) (./ch_2.tex [5<./pic/1_1_schem.png>] [6<./pic/1_x.png><./pic/1_y.png>]
+<pic/2_g.png, id=102, 505.89pt x 290.2845pt>
+File: pic/2_g.png Graphic file (type png)
+<use pic/2_g.png>
+Package luatex.def Info: pic/2_g.png  used on input line 64.
+(luatex.def)             Requested size: 469.47049pt x 269.3904pt.
 
-]) (./ch_sum.tex [8
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7
+
+] [8<./pic/2_g.png>] [9]
+
+LaTeX Warning: Reference `' on page 10 undefined on input line 177.
+
+
+LaTeX Warning: Reference `' on page 10 undefined on input line 177.
+
+
+LaTeX Warning: Reference `' on page 10 undefined on input line 177.
+
+) (./ch_3.tex [10]) (./ch_sum.tex [11
 
 ])
 
@@ -1634,7 +1653,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[9
+[12
 
 ]
 \tf@toc=\write6
@@ -1645,6 +1664,10 @@ See the caption package documentation for explanation.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `0_main.out' has not changed.
 (rerunfilecheck)             Checksum: 7C366BB2446FDFFDD27CE738187EC4EF;1781.
 Package logreq Info: Writing requests to '0_main.run.xml'.
@@ -1653,13 +1676,13 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29637 strings out of 476497
+ 29676 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1447 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 75 attribute, 200 glue_spe
-c, 39 attribute_list, 2 write nodes
-   avail lists: 1:3,2:901,3:194,4:48,5:500,6:48,7:3926,8:51,9:715,10:7,11:421
- 51046 multiletter control sequences out of 65536+600000
+ 1645 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 141 attribute, 200 glue_sp
+ec, 72 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1024,3:196,4:48,5:501,6:48,7:4546,8:53,9:876,10:8,11:421
+ 51061 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
  85i,12n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
@@ -1671,9 +1694,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (9 pages, 359154 bytes).
+Output written on 0_main.pdf (12 pages, 433786 bytes).
 
-PDF statistics: 158 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 131072)
+PDF statistics: 198 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 131072)
  49 words of extra memory for PDF output out of 10000 (max. 100000000)
 

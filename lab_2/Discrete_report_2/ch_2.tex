@@ -1,5 +1,179 @@
 \chapter{Проектирование дискретных следящих регуляторов}
 \label{ch:chap2}
+Синтезируем дискретный генератор задающего воздействия. Так как $\omega_g$ для нашего варианта равен нулю, то в качестве задающего воздействия будет выступать полином
+\begin{equation}
+	g(k) = g_0 + g_1 kT 
+\end{equation}
+Запишем дискретную модель внешнего воздействия в пространстве состояний
+\begin{equation}
+	\begin{cases}
+\xi \left(k+1\right) = \Gamma \xi (k)\\
+g(k) = H \xi (k),
+	\end{cases}
+\end{equation}
+где $\Gamma$ -- матрица динамических свойств дискретного генератора, $H$ -- матрица выхода.
+\begin{equation}
+		g(k) = g_0 + g_1 kT 
+\end{equation}
+\begin{equation}
+	g(k+1) = g_0 + g_1 (k+1)T = g_0 + g_1 kT  + g_1T = g(k) +g_1T
+\end{equation}
+\begin{equation}
+g(k+2) = g_0 + g_1 (k+2)T = g(k) + 2g_1T = 2 g(k+1) - g(k)
+\end{equation}
 
+Примем в качестве вектора состояния:
+\begin{equation}
+	\begin{cases}
+\xi_1(k) = g(k)\\
+\xi_2(k) = \xi_1(k+1)  = \xi_1(k) +g_1 T\\
+\xi_3(k) = \xi_2(k+1) = 2 \xi_2(k) - \xi_1(k)
+	\end{cases}
+\end{equation}
+Отсюда
+\begin{equation}
+\begin{cases}
+\begin{bmatrix}
+	\xi_1(k+1)\\
+	\xi_2(k+1)
+\end{bmatrix} = \begin{bmatrix}
+0 & 1\\
+-1 & 2
+\end{bmatrix}
+\begin{bmatrix}
+	\xi_1(k)\\
+	\xi_2(k)
+\end{bmatrix}\\
+g(k) = \begin{bmatrix}
+	1 & 0
+\end{bmatrix}\begin{bmatrix}
+\xi_1(k)\\
+\xi_2(k)
+\end{bmatrix}
+\end{cases}
+\end{equation}
+Начальные условия:
+\begin{equation}
+	\begin{cases}
+		\xi_1(0) = g_0\\
+		\xi_2(0) = g_0+g_1T
+	\end{cases}
+\end{equation}
+График сигнала $g(k)$ представлен на рисунке \ref{2_g}.
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/2_g.png}}
+	\caption{График задающего воздействия $g(k)$.}
+	\label{2_g}
+\end{figure}
+
+Для ОУ (\ref{1_d_oc}) синтезируем следящий регулятор методом внутренней модели. В качестве эталонной модели возьмем оптимальную по быстродействию дискретную систему, то есть примем $z_i^*=0$, $i = \overline{1,n}$.
+
+
+Составим небходимые матрицы
+\begin{equation}
+	\Gamma = \begin{bmatrix}
+		z_1^* & 1\\
+		0 & z_2^*
+	\end{bmatrix} = \begin{bmatrix}
+	0 & 1\\
+	0 & 0
+	\end{bmatrix}, \, \, 
+	H = \begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+Синтезируем регулятор со встроенной моделью, описание которого задается уравнениями
+\begin{equation}
+	\begin{cases}
+		\eta (m+1) = \Gamma \eta (m) + B_\eta e(m)\\
+		u(m) = k_1e(m) + K_\eta \eta (m) - k_2x_2(m) - \cdots - k_n x_n(m),
+	\end{cases}
+\end{equation}
+где $\eta \in R^q$ -- вектор состояния встроенной модели, по размерности совпадающий с вектором внешних воздействий; $\Gamma$ -- матрица размерности $q \times q$, совпадающая с матрицей МВВ; $B_\eta$ -- матрица входов встроенной модели (МВВМ).
+
+Введем в рассмотрение расширенную модель ОУ, объединив уравнения движения объекта с уравнением встроенной модели:
+\begin{equation}
+	\overline{x}(m+1) = \begin{bmatrix}
+		\eta (m+1)\\
+		x(m + 1)
+	\end{bmatrix} = \begin{bmatrix}
+	\Gamma & -B_\eta C\\
+	0 & A
+	\end{bmatrix} \begin{bmatrix}
+	\eta (m)\\ x(m)
+	\end{bmatrix} + \begin{bmatrix}
+	0 \\ B
+	\end{bmatrix} u(m) + \begin{bmatrix}
+	B_\eta \\ 0
+	\end{bmatrix} g(m),
+\end{equation}
+Тогда, с учетом обозначений
+\begin{equation}
+	\overline{A} = \begin{bmatrix}
+		\Gamma & -B_\eta C\\
+		0 & A
+	\end{bmatrix}, \, \,
+	\overline{B} = \begin{bmatrix}
+		0\\B
+	\end{bmatrix}, \, \, 
+	\overline{B}_1 = \begin{bmatrix}
+		B_\eta \\ 0
+	\end{bmatrix}, \, \, 
+	\overline{K} = \begin{bmatrix}
+		-K_\eta & K
+	\end{bmatrix}
+\end{equation}
+получим в итоге для замкнутой системы
+\begin{equation}
+	\overline{x} (m+1) = \left(\overline{A} - \overline{B}\overline{K}\right)\overline{x}(m) + \left(\overline{B}_1 + k_1 \overline{B}\right) g(m) = \overline{F}x(m) + B_g g(m),
+\end{equation}
+где $\overline{F} = \overline{A} - \overline{B} \overline{K}$ -- матрица размерности $(n + q) \times (n + q)$, определяющая динамические свойства замкнутой системы; $\overline{B}_g = \overline{B}_1 + k_1 \overline{B}$ -- матрица входов по задающему воздействию размерности $(n+q) \times 1$.
+
+Если пара $\overline{A}$, $\overline{B}$ полностью управляема, то выбором матрицы $\overline{K}$ можно обеспечить произвольные желаемые корни характеристического полинома или коэффициенты уравнения замкнутой системы. Отметим, что пара $\overline{A}$, $\overline{B}$ будет полностью управляемой при выполнении следующих условий:
+\begin{itemize}
+	\item пара $A$, $B$ объекта полностью управляема, а пара $C$, $A$ полностью наблюдаема;
+	\item пара $\Gamma$, $B_\eta$ -- полностью управляема.
+\end{itemize}
+Первое условие выполнено -- было проверено в первой части работы. Для выполнения второго условия зададимся матрицей 
+\begin{equation}
+B_\eta = \begin{bmatrix}
+	0\\1
+\end{bmatrix}
+\end{equation}
+Тогда все условия оказываются выполнены, следовательно, пара $\overline{A}$, $\overline{B}$ полностью управляема
+\begin{equation}
+	\overline{A} = \begin{bmatrix}
+0&	1&	0&	0\\
+-1&	2&	-0.0361	&0\\
+0&	0&	0.9946&	0.9613\\
+0&	0&	-0.0107	0.9217
+	\end{bmatrix}, \, \,
+	\overline{B} = \begin{bmatrix}
+		0\\0\\
+		0.4872\\
+		0.9613
+	\end{bmatrix}, \, \, 
+	\overline{B}_1 = \begin{bmatrix}
+		0 \\ 1\\0 \\ 0
+	\end{bmatrix}
+\end{equation}
+Теперь найдем значение матрицы $\overline{K}$, воспользовывшись уравнением Сильвестра (\ref{1_syl_1}) и формулой для нахождения матрицы связи (\ref{1_syl_2}).
+
+Получим следующие результаты:
+\begin{equation}
+	P = \begin{bmatrix}
+		0.0185 &	0.0943 &	0.2684 &	0.5841\\
+		0 &	0.0185 &	0.0943 &	0.2684\\
+		-0.5124 &	-1.5848 &	-2.7233 &	-3.9202\\
+		1.0370 &	1.1067 &	1.1692 &	1.2231
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\overline{K} = \begin{bmatrix}
+		71.7506	&-100.5235&	4.3864&	1.8512
+	\end{bmatrix}
+\end{equation}
+
+Перейдем к моделированию замкнутой системы (рисунок \ref{}). Графики выходной переменной и ошибки слежения приведены на рисунках \ref{} и \ref{}, соответственно.
 
 \endinput

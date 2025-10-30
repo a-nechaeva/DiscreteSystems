@@ -49,6 +49,7 @@
 
 Теперь перейдем к соответствующей дискретной системе в пространстве состояний
 \begin{equation}
+	\label{1_d_oc}
 	\begin{cases}
 		x(k+1) = Ax(k) + Bu(k)\\
 		y(k) = Cx(k)
@@ -135,6 +136,7 @@
 
 Теперь решим уравнение Сильвестра относительно $P$ и вычислим значение матрицы $K$
 \begin{equation}
+	\label{1_syl_1}
 	A P - P \Gamma = BH, \Rightarrow
 	P = \begin{bmatrix}
 	-0.5124 &	-1.5848\\
@@ -142,6 +144,7 @@
 	\end{bmatrix}
 \end{equation}
 \begin{equation}
+	\label{1_syl_2}
 	K = H P^{-1} = \begin{bmatrix}
 		1.0283&	1.4725
 	\end{bmatrix}
