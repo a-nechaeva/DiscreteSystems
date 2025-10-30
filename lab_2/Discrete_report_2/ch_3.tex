@@ -97,24 +97,96 @@ F & -BD\\
 \begin{equation}
 	det \left(\overline{F} - zI_{(2n-1) \times (2n-1)}\right) = det \left(F-zI_{n \times n}\right) det \left(F_\text{н} - zI_{(n-1) \times (n-1)}\right)
 \end{equation}
-Так как нам нужна оптимальная по быстродействию система, то
 \begin{equation}
 	F_\text{н} = \begin{bmatrix}
-		0 & 1\\ 0 & 0
+		0
 	\end{bmatrix}, \, \, 
 	G = \begin{bmatrix}
-		1 & 0
+		1
 	\end{bmatrix}
 \end{equation}
 Заметим, что пара $\left(F_\text{н}, G\right)$ полностью управляема.
+
+Наблюдаемость пары $C_\text{и}$, $A$ была проверена в первой главе работы, кроме того выполнено $rank \left(C_\text{и}\right) = 1$.
 
 Решим уравнение Сильвестра относительно $M_\text{н}$:
 \begin{equation}
 	M_\text{н}A - F_\text{н}M_\text{н}= G C_\text{и} \Rightarrow
 	M_\text{н} = \begin{bmatrix}
+		0.0359&	-0.0375
+	\end{bmatrix}
+\end{equation}
+
+Теперь путем решения матричного уравненния Сильвестра вычислим матрицу обратных связей $K$.
+
+Так как нам нужна оптимальная по быстродействию система и пара $(H, \Gamma)$ должна быть полностью наблюдаема
+\begin{equation}
+	\Gamma = \begin{bmatrix}
+		0 & 1\\
+		0 & 0
+	\end{bmatrix}, \, \, 
+	H = \begin{bmatrix}
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	M \Gamma - AM = -BH \Rightarrow
+	M = \begin{bmatrix}
+		-0.5124 &	-1.5848\\
+		1.0370 &	1.1067
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	K = HM^{-1} = \begin{bmatrix}
+		1.0283 &	1.4725
+	\end{bmatrix}
+\end{equation}
+
+Теперь вычислим значения матриц $E$ и $D$:
+\begin{equation}
+	\begin{bmatrix}
+		E & D
+	\end{bmatrix} = K \begin{bmatrix}
+		C_\text{и}\\ M_\text{н}
+	\end{bmatrix}^{-1} = \begin{bmatrix}
+	67.5541&	-39.3111
 	\end{bmatrix}
 \end{equation}
 
 
+Построим модель замкнутой системы, полученной в первой главе работы в предположении о недоступности измерению переменных вектора состояния (рисунок \ref{3_schem_1}). Приведем графики переменных вектора состояния ОУ, его оценки и их разность (рисунок \ref{3_xxh_1} и \ref{3_e_1}), график вектора переменных наблюдателя (рисунок \ref{3_z_1}), вектора невязки наблюдателя (рисунок \ref{3_zt_1}) и выходной переменной ОУ (рисунок \ref{3_y_1}).
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_schem_1.png}}
+	\caption{Схема моделирования замкнутой системы из первой главы с устройством оценки пониженной размерности.}
+	\label{3_schem_1}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_xxh_1.png}}
+	\caption{График переменных вектора состояния ОУ $x(k)$ и их оценки $\hat{x}(k)$.}
+	\label{3_xxh_1}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_e_1.png}}
+	\caption{График разности вектора состояния ОУ и его оценки  $e(k)$.}
+	\label{3_e_1}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_z_1.png}}
+	\caption{График переменных вектора состояния наблюдателя $\hat{z}(k)$.}
+	\label{3_z_1}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_zt_1.png}}
+	\caption{График невязки наблюдателя $\tilde{z}(k)$.}
+	\label{3_zt_1}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_y_1.png}}
+	\caption{График выходной переменной ОУ $y(k)$.}
+	\label{3_y_1}
+\end{figure}
+
+Заметим, что условие оптимальной по быстродействию сходимости для наблюдателя и регулятора выполнено. Система размерности 3, поэтому сигнал сходится к нулю за время $3T$, размерность устройства оценки 1, следовательно, оценка состояния сходится к истинному значению за время $1T$, что и показано на графиках.
 
 \endinput

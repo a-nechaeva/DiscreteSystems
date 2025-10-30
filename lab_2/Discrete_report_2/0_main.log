@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 18:24
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  30 OCT 2025 23:10
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1666,7 +1666,58 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) (./ch_3.tex [10] [11<./pic/2_schem.png><./pic/2_y.png>] [12<./pic/2_e.png><./p
 ic/2_gy.png>] [13
 
-] [14]) (./ch_sum.tex [15])
+] [14]
+<pic/3_schem_1.png, id=191, 894.9435pt x 415.5525pt>
+File: pic/3_schem_1.png Graphic file (type png)
+<use pic/3_schem_1.png>
+Package luatex.def Info: pic/3_schem_1.png  used on input line 160.
+(luatex.def)             Requested size: 469.47049pt x 217.99078pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_xxh_1.png, id=192, 506.6127pt x 290.2845pt>
+File: pic/3_xxh_1.png Graphic file (type png)
+<use pic/3_xxh_1.png>
+Package luatex.def Info: pic/3_xxh_1.png  used on input line 165.
+(luatex.def)             Requested size: 469.47049pt x 269.00946pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_e_1.png, id=193, 517.6941pt x 290.5254pt>
+File: pic/3_e_1.png Graphic file (type png)
+<use pic/3_e_1.png>
+Package luatex.def Info: pic/3_e_1.png  used on input line 170.
+(luatex.def)             Requested size: 469.47049pt x 263.46532pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_z_1.png, id=194, 512.1534pt x 290.5254pt>
+File: pic/3_z_1.png Graphic file (type png)
+<use pic/3_z_1.png>
+Package luatex.def Info: pic/3_z_1.png  used on input line 175.
+(luatex.def)             Requested size: 469.47049pt x 266.32463pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_zt_1.png, id=195, 506.6127pt x 290.2845pt>
+File: pic/3_zt_1.png Graphic file (type png)
+<use pic/3_zt_1.png>
+Package luatex.def Info: pic/3_zt_1.png  used on input line 180.
+(luatex.def)             Requested size: 469.47049pt x 269.00946pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_y_1.png, id=196, 514.3215pt x 290.2845pt>
+File: pic/3_y_1.png Graphic file (type png)
+<use pic/3_y_1.png>
+Package luatex.def Info: pic/3_y_1.png  used on input line 185.
+(luatex.def)             Requested size: 469.47049pt x 264.9743pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./ch_sum.tex [15] [16<./pic/3_schem_1.png><./pic/3_xxh_1.png>] [17<./pic/3_e_
+1.png><./pic/3_z_1.png>] [18<./pic/3_zt_1.png><./pic/3_y_1.png>])
 
 LaTeX Warning: Empty bibliography on input line 190.
 
@@ -1678,7 +1729,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[16
+[19
 
 ]
 \tf@toc=\write6
@@ -1697,13 +1748,13 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29749 strings out of 476497
+ 29828 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1825 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 201 attribute, 200 glue_sp
-ec, 102 attribute_list, 2 write nodes
-   avail lists: 1:3,2:1303,3:196,4:60,5:501,6:48,7:4231,8:72,9:880,10:15,11:464
- 51095 multiletter control sequences out of 65536+600000
+ 1879 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 219 attribute, 200 glue_sp
+ec, 111 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1435,3:218,4:72,5:501,6:50,7:4231,8:72,9:880,10:15,11:464
+ 51143 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
  85i,15n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
@@ -1715,9 +1766,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (16 pages, 648285 bytes).
+Output written on 0_main.pdf (19 pages, 1003575 bytes).
 
-PDF statistics: 242 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 131072)
+PDF statistics: 277 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 131072)
  49 words of extra memory for PDF output out of 10000 (max. 100000000)
 
