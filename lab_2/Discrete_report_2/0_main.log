@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  31 OCT 2025 00:25
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  2 NOV 2025 00:19
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1586,7 +1586,7 @@ Package chemgreek Info: Activating mapping `fontspec' on line 174.
 
 {C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (./0_main.toc
 ) (./ch_1.tex [2]
-<pic/1_schem.png, id=48, 281.853pt x 102.3825pt>
+<pic/1_schem.png, id=58, 281.853pt x 102.3825pt>
 File: pic/1_schem.png Graphic file (type png)
 <use pic/1_schem.png>
 Package luatex.def Info: pic/1_schem.png  used on input line 8.
@@ -1595,17 +1595,17 @@ Package luatex.def Info: pic/1_schem.png  used on input line 8.
 
 <./pic/1_schem.png>]
 [4]
-<pic/1_1_schem.png, id=78, 833.514pt x 249.93375pt>
+<pic/1_1_schem.png, id=88, 833.514pt x 249.93375pt>
 File: pic/1_1_schem.png Graphic file (type png)
 <use pic/1_1_schem.png>
 Package luatex.def Info: pic/1_1_schem.png  used on input line 154.
 (luatex.def)             Requested size: 469.47049pt x 140.77425pt.
-<pic/1_x.png, id=82, 509.2626pt x 290.2845pt>
+<pic/1_x.png, id=92, 509.2626pt x 290.2845pt>
 File: pic/1_x.png Graphic file (type png)
 <use pic/1_x.png>
 Package luatex.def Info: pic/1_x.png  used on input line 161.
 (luatex.def)             Requested size: 469.47049pt x 267.60536pt.
-<pic/1_y.png, id=83, 516.9714pt x 290.2845pt>
+<pic/1_y.png, id=93, 516.9714pt x 290.2845pt>
 File: pic/1_y.png Graphic file (type png)
 <use pic/1_y.png>
 Package luatex.def Info: pic/1_y.png  used on input line 166.
@@ -1618,7 +1618,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./ch_2.tex [5<./pic/1_1_schem.png>] [6<./pic/1_x.png><./pic/1_y.png>]
-<pic/2_g.png, id=102, 505.89pt x 290.2845pt>
+<pic/2_g.png, id=112, 505.89pt x 290.2845pt>
 File: pic/2_g.png Graphic file (type png)
 <use pic/2_g.png>
 Package luatex.def Info: pic/2_g.png  used on input line 66.
@@ -1630,7 +1630,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [7
 
 ] [8<./pic/2_g.png>] [9]
-<pic/2_schem.png, id=139, 982.26974pt x 237.2865pt>
+<pic/2_schem.png, id=149, 982.26974pt x 237.2865pt>
 File: pic/2_schem.png Graphic file (type png)
 <use pic/2_schem.png>
 Package luatex.def Info: pic/2_schem.png  used on input line 213.
@@ -1639,7 +1639,7 @@ Package luatex.def Info: pic/2_schem.png  used on input line 213.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/2_y.png, id=140, 503.2401pt x 290.5254pt>
+<pic/2_y.png, id=150, 503.2401pt x 290.5254pt>
 File: pic/2_y.png Graphic file (type png)
 <use pic/2_y.png>
 Package luatex.def Info: pic/2_y.png  used on input line 219.
@@ -1647,7 +1647,7 @@ Package luatex.def Info: pic/2_y.png  used on input line 219.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/2_e.png, id=141, 506.6127pt x 290.5254pt>
+<pic/2_e.png, id=151, 506.6127pt x 290.5254pt>
 File: pic/2_e.png Graphic file (type png)
 <use pic/2_e.png>
 Package luatex.def Info: pic/2_e.png  used on input line 225.
@@ -1655,7 +1655,7 @@ Package luatex.def Info: pic/2_e.png  used on input line 225.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/2_gy.png, id=142, 503.2401pt x 290.5254pt>
+<pic/2_gy.png, id=152, 503.2401pt x 290.5254pt>
 File: pic/2_gy.png Graphic file (type png)
 <use pic/2_gy.png>
 Package luatex.def Info: pic/2_gy.png  used on input line 231.
@@ -1667,57 +1667,104 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ic/2_gy.png>] [13
 
 ] [14]
-<pic/3_schem_1.png, id=191, 894.9435pt x 415.5525pt>
+<pic/3_schem_1.png, id=200, 773.289pt x 358.941pt>
 File: pic/3_schem_1.png Graphic file (type png)
 <use pic/3_schem_1.png>
-Package luatex.def Info: pic/3_schem_1.png  used on input line 160.
-(luatex.def)             Requested size: 469.47049pt x 217.99078pt.
+Package luatex.def Info: pic/3_schem_1.png  used on input line 161.
+(luatex.def)             Requested size: 469.47049pt x 217.91306pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/3_xxh_1.png, id=192, 506.6127pt x 290.2845pt>
+<pic/3_xxh_1.png, id=201, 506.6127pt x 290.2845pt>
 File: pic/3_xxh_1.png Graphic file (type png)
 <use pic/3_xxh_1.png>
-Package luatex.def Info: pic/3_xxh_1.png  used on input line 165.
+Package luatex.def Info: pic/3_xxh_1.png  used on input line 166.
 (luatex.def)             Requested size: 469.47049pt x 269.00946pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/3_e_1.png, id=193, 517.6941pt x 290.5254pt>
+<pic/3_e_1.png, id=202, 517.6941pt x 290.5254pt>
 File: pic/3_e_1.png Graphic file (type png)
 <use pic/3_e_1.png>
-Package luatex.def Info: pic/3_e_1.png  used on input line 170.
+Package luatex.def Info: pic/3_e_1.png  used on input line 171.
 (luatex.def)             Requested size: 469.47049pt x 263.46532pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/3_z_1.png, id=194, 512.1534pt x 290.5254pt>
+<pic/3_z_1.png, id=203, 512.1534pt x 290.5254pt>
 File: pic/3_z_1.png Graphic file (type png)
 <use pic/3_z_1.png>
-Package luatex.def Info: pic/3_z_1.png  used on input line 175.
+Package luatex.def Info: pic/3_z_1.png  used on input line 176.
 (luatex.def)             Requested size: 469.47049pt x 266.32463pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/3_zt_1.png, id=195, 506.6127pt x 290.2845pt>
+<pic/3_zt_1.png, id=204, 500.5902pt x 290.2845pt>
 File: pic/3_zt_1.png Graphic file (type png)
 <use pic/3_zt_1.png>
-Package luatex.def Info: pic/3_zt_1.png  used on input line 180.
-(luatex.def)             Requested size: 469.47049pt x 269.00946pt.
+Package luatex.def Info: pic/3_zt_1.png  used on input line 181.
+(luatex.def)             Requested size: 469.47049pt x 272.25177pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pic/3_y_1.png, id=196, 514.3215pt x 290.2845pt>
+<pic/3_y_1.png, id=205, 514.3215pt x 290.2845pt>
 File: pic/3_y_1.png Graphic file (type png)
 <use pic/3_y_1.png>
-Package luatex.def Info: pic/3_y_1.png  used on input line 185.
+Package luatex.def Info: pic/3_y_1.png  used on input line 186.
 (luatex.def)             Requested size: 469.47049pt x 264.9743pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15] [16<./pic/3_schem_1.png><./pic/3_xxh_1.png>] [17<./pic/3_e_1.png><./pic/3_z
-_1.png>] [18<./pic/3_zt_1.png><./pic/3_y_1.png>]) (./ch_sum.tex [19])
+_1.png>] [18<./pic/3_zt_1.png><./pic/3_y_1.png>] [19
+
+]
+<pic/3_schem_2.png, id=250, 919.63576pt x 439.04025pt>
+File: pic/3_schem_2.png Graphic file (type png)
+<use pic/3_schem_2.png>
+Package luatex.def Info: pic/3_schem_2.png  used on input line 283.
+(luatex.def)             Requested size: 469.47049pt x 224.12863pt.
+<pic/3_xxh_2.png, id=251, 506.6127pt x 290.2845pt>
+File: pic/3_xxh_2.png Graphic file (type png)
+<use pic/3_xxh_2.png>
+Package luatex.def Info: pic/3_xxh_2.png  used on input line 288.
+(luatex.def)             Requested size: 469.47049pt x 269.00946pt.
+<pic/3_e_2.png, id=252, 516.9714pt x 290.5254pt>
+File: pic/3_e_2.png Graphic file (type png)
+<use pic/3_e_2.png>
+Package luatex.def Info: pic/3_e_2.png  used on input line 293.
+(luatex.def)             Requested size: 469.47049pt x 263.82883pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_z_2.png, id=253, 503.2401pt x 290.2845pt>
+File: pic/3_z_2.png Graphic file (type png)
+<use pic/3_z_2.png>
+Package luatex.def Info: pic/3_z_2.png  used on input line 298.
+(luatex.def)             Requested size: 469.47049pt x 270.81223pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_zt_2.png, id=254, 520.344pt x 290.5254pt>
+File: pic/3_zt_2.png Graphic file (type png)
+<use pic/3_zt_2.png>
+Package luatex.def Info: pic/3_zt_2.png  used on input line 303.
+(luatex.def)             Requested size: 469.47049pt x 262.13539pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_y_2.png, id=255, 505.89pt x 290.5254pt>
+File: pic/3_y_2.png Graphic file (type png)
+<use pic/3_y_2.png>
+Package luatex.def Info: pic/3_y_2.png  used on input line 308.
+(luatex.def)             Requested size: 469.47049pt x 269.61397pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20<./pic/3_schem_2.png><./pic/3_xxh_2.png>]) (./ch_sum.tex [21<./pic/3_e_2.png>
+<./pic/3_z_2.png>] [22<./pic/3_zt_2.png><./pic/3_y_2.png>])
 
 LaTeX Warning: Empty bibliography on input line 190.
 
@@ -1729,7 +1776,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[20
+[23
 
 ]
 \tf@toc=\write6
@@ -1741,20 +1788,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_main.out' has not changed.
-(rerunfilecheck)             Checksum: 7C366BB2446FDFFDD27CE738187EC4EF;1781.
+(rerunfilecheck)             Checksum: A54EC33A3B4E00F2494F499222573040;2529.
 Package logreq Info: Writing requests to '0_main.run.xml'.
 
 \openout1 = 0_main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 29831 strings out of 476497
+ 29912 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1897 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 225 attribute, 200 glue_sp
-ec, 114 attribute_list, 2 write nodes
-   avail lists: 1:3,2:1425,3:218,4:72,5:501,6:50,7:4231,8:72,9:880,10:15,11:464
- 51143 multiletter control sequences out of 65536+600000
+ 1939 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 239 attribute, 200 glue_sp
+ec, 121 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1493,3:235,4:84,5:520,6:51,7:4803,8:72,9:880,10:15,11:536
+ 51193 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
  85i,15n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
@@ -1766,9 +1813,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (20 pages, 1005835 bytes).
+Output written on 0_main.pdf (23 pages, 1391914 bytes).
 
-PDF statistics: 283 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 131072)
- 49 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 328 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 131072)
+ 65 words of extra memory for PDF output out of 10000 (max. 100000000)
 

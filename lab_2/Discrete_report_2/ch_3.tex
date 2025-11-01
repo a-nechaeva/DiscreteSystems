@@ -1,5 +1,6 @@
 \chapter{Построение регуляторов для объектов с неполной информацией}
 \label{ch:chap3}
+\section{Построение регулятора для первой системы}
 Синтезируем устройство оценки вектора состояния для ОУ (\ref{1_d_oc}). Будем строить динамический регулятор с устройством оценки пониженной размерности по следующим уравнениям движения замкнутой системы:
 \begin{equation}
 	\begin{cases}
@@ -60,7 +61,7 @@ C_\text{и}\\ M_\text{н}
 	\hat{z}(m+1) = F_\text{н} \hat{z} (m) + \left(G C_\text{и}-M_\text{н}A\right) x(m) = F_\text{н} \left(\hat{z}(m) - M_\text{н} x(m)\right)
 \end{equation}
 
-Введем в рассмотрение вектор невязки в виде $\tilde{z}(m) = \hat{z}(m) - Mx(m)$. Тогда для замкнутой системы справедливы следующие равенства
+Введем в рассмотрение вектор невязки в виде $\tilde{z}(m) = \hat{z}(m) - M\text{н}x(m)$. Тогда для замкнутой системы справедливы следующие равенства
 \begin{equation}
 	\begin{cases}
 		x(m+1) = Ax(m) + Bu(m)\\
@@ -186,31 +187,129 @@ F & -BD\\
 	\caption{График выходной переменной ОУ $y(k)$.}
 	\label{3_y_1}
 \end{figure}
-\newpage
-\,
-\newpage
-\,
-\newpage
+
 Заметим, что условие оптимальной по быстродействию сходимости для наблюдателя и регулятора выполнено. Система размерности 3, поэтому сигнал сходится к нулю за время $3T$, размерность устройства оценки 1, следовательно, оценка состояния сходится к истинному значению за время $1T$, что и показано на графиках.
 
-Теперь осуществим моделирование замкнутой системы, полученной во второй главе в предположении о недоступности измерению переменных вектора состояния.
+\section{Построение регулятора для второй системы}
 
-Запишем матрицу $K$ (последние два элемента матрицы $\overline{K}$ из главы 2):
+Выполним моделирование замкнутой системы, полученной во второй главе данной работы в предположении о недоступности измерению переменных вектора состояния.
+
+Кратко выпишем все системы уравнений, которые необходимы для построения схемы и запишем численные значения матриц.
+
+Дискретная модель объекта:
 \begin{equation}
+	\begin{cases}
+		x(k + 1) = A x(k) + Bu(k)\\
+		y(k) = Cx(k)
+	\end{cases},
+\end{equation}
+где
+\begin{equation*}
+	A = \begin{bmatrix}
+0.9946 &	0.9613\\
+-0.0107 &	0.9217
+	\end{bmatrix}, \, \, 
+	B = \begin{bmatrix}
+0.4872\\
+0.9613
+	\end{bmatrix}, \, \, 
+	C = \begin{bmatrix}
+1 & 0
+	\end{bmatrix}
+\end{equation*}
+
+Уравнение устройства оценки пониженной размерности
+\begin{equation}
+	\begin{cases}
+		\hat{z}(k+1) = F_\text{н} \hat{z}(k) + Gy(k) + M\text{н}Bu(k), & \hat{z}(0) = 0\\
+		\hat{x}(k) = \begin{bmatrix}
+			C\\ M\text{н}
+		\end{bmatrix}^{-1} \begin{bmatrix}
+		y(k)\\ \hat{z}(k)
+		\end{bmatrix}
+	\end{cases},
+\end{equation}
+где
+\begin{equation*}
+	F_\text{н} = \begin{bmatrix}
+0
+	\end{bmatrix}, \, \, 
+	G = \begin{bmatrix}
+1
+	\end{bmatrix}, \, \, 
+	M\text{н} = \begin{bmatrix}
+0.9943 &	-1.0370
+	\end{bmatrix}
+\end{equation*}
+
+Уравнения следящего регулятора со встроенной моделью
+\begin{equation}
+\begin{cases}
+\eta (k+1) = \Gamma \eta (k) + B_n e(k)\\
+u(k) = k_1 e(k) + K_n \eta (k) - K\hat{x} (k)\\
+e(k) = g(k) - y(k)
+\end{cases},
+\end{equation}
+где
+\begin{equation*}
+	\Gamma = \begin{bmatrix}
+0 & 1\\
+-1 & 2
+	\end{bmatrix}, \, \, 
+	B_n = \begin{bmatrix}
+1 \\ 0
+	\end{bmatrix}, \, \, 
 	K = \begin{bmatrix}
-		4.3864 &	1.8512
+			4.3864 &	1.8512
+	\end{bmatrix}, \, \, 
+	K_n = \begin{bmatrix}
+		3.6311 & 4.6704
 	\end{bmatrix}
+\end{equation*}
+Найдем также новые значения $E$ и $D$:
+\begin{equation}
+\begin{bmatrix}
+	E & D
+\end{bmatrix}  = K \begin{bmatrix}
+C_\text{и}\\ M_\text{н}
+\end{bmatrix}^{-1} = \begin{bmatrix}    
+6.1615 &  -1.7852
+\end{bmatrix}
 \end{equation}
 
-Найдем новые значения матриц $E$ и $D$:
-\begin{equation}
-	\begin{bmatrix}
-		E & D
-	\end{bmatrix} = K \begin{bmatrix}
-		C_\text{и}\\ M_\text{н}
-	\end{bmatrix}^{-1} = \begin{bmatrix}
-	170.5751&	-49.4224
-	\end{bmatrix}
-\end{equation}
+Построим модель замкнутой системы, полученной в первой главе работы в предположении о недоступности измерению переменных вектора состояния (рисунок \ref{3_schem_2}). Приведем графики переменных вектора состояния ОУ, его оценки и их разность (рисунок \ref{3_xxh_2} и \ref{3_e_2}), график вектора переменных наблюдателя (рисунок \ref{3_z_2}), вектора невязки наблюдателя (рисунок \ref{3_zt_2}) и выходной переменной ОУ (рисунок \ref{3_y_2}).
+
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_schem_2.png}}
+	\caption{Схема моделирования замкнутой системы из второй главы с устройством оценки пониженной размерности.}
+	\label{3_schem_2}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_xxh_2.png}}
+	\caption{График переменных вектора состояния ОУ $x(k)$ и их оценки $\hat{x}(k)$.}
+	\label{3_xxh_2}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_e_2.png}}
+	\caption{График разности вектора состояния ОУ и его оценки  $e(k)$.}
+	\label{3_e_2}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_z_2.png}}
+	\caption{График переменных вектора состояния наблюдателя $\hat{z}(k)$.}
+	\label{3_z_2}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_zt_2.png}}
+	\caption{График невязки наблюдателя $\tilde{z}(k)$.}
+	\label{3_zt_2}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/3_y_2.png}}
+	\caption{График выходной переменной ОУ $y(k)$.}
+	\label{3_y_2}
+\end{figure}
+
+Заметим, что условие оптимальной по быстродействию сходимости для наблюдателя и регулятора выполнено. Система размерности 5, поэтому сигнал сходится к нулю за время $5T$, размерность устройства оценки 1, следовательно, оценка состояния сходится к истинному значению за время $1T$, что и показано на графиках.
 
 \endinput
