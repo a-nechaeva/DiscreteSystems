@@ -1,5 +1,29 @@
 \chapter{Настройка параметров дискретного регулятора}
 \label{ch:chap2}
+Рассчитаем значения полюсов:
+\begin{equation}
+	\begin{cases}
+		z_1 = d_1 = e^{-\frac{T}{T_1}} =0.6065\\
+		z_2 = d_2 = e^{-\frac{T}{T_2}} = 0.7165
+	\end{cases}
+\end{equation}
+Найдем коэффициенты числителя регулятора:
+\begin{equation}
+num(z) = z^2 + (-d_1-d_2)z + d_1d_2 = z^2 - 1.3231z+0.4346
+\end{equation}
 
+Экспериментально найдем значение коэффициента передачи регулятора $q_0$, при котором система устойчива и имеет слабоколебательные переходные процессы.
+
+При $q_0 = 10$ замкнутая система устойчива и переходные процессы слабоколебательного характера, рисунки \ref{1_u} и \ref{1_y}.
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_u.png}}
+	\caption{График выходного сигнала регулятора $u(t)$.}
+	\label{1_u}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_y.png}}
+	\caption{График выходного сигнала системы $y(t)$.}
+	\label{1_y}
+\end{figure}
 
 \endinput

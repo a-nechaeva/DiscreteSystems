@@ -1,5 +1,65 @@
 \chapter{Исследование процессов на выходе дискретного регулятора и системы}
 \label{ch:chap3}
+Пронаблюдаем и зафиксируем процессы на выходе дискретного регулятора и системы:
+\begin{itemize}
+	\item при ступенчатом изменении задающего воздействия (рисунки \ref{3_1_u}, \ref{3_1_y} и \ref{3_1_g});
+	\item при ступенчатом изменении возмущающего воздействия (рисунки \ref{3_2_u}, \ref{3_2_y} и \ref{3_2_f});
+	\item возмущающем воздействии, изменяющемся по случайному закону (рисунки \ref{3_3_u}, \ref{3_3_y} и \ref{3_3_f}).
+\end{itemize}
 
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_1_u.png}}
+	\caption{График выходного сигнала регулятора $u(t)$ при ступенчатом изменении задающего воздействия.}
+	\label{3_1_u}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_1_y.png}}
+	\caption{График выходного сигнала системы $y(t)$ при ступенчатом изменении задающего воздействия.}
+	\label{3_1_y}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_1_g.png}}
+	\caption{График ступенчатого изменения задающего воздействия $g(t)$.}
+	\label{3_1_g}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_2_u.png}}
+	\caption{График выходного сигнала регулятора $u(t)$ при ступенчатом изменении возмущающего воздействия.}
+	\label{3_2_u}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_2_y.png}}
+	\caption{График выходного сигнала системы $y(t)$ при ступенчатом изменении возмущающего воздействия.}
+	\label{3_2_y}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_2_f.png}}
+	\caption{График ступенчатого изменения возмущающего воздействия $f(t)$.}
+	\label{3_2_f}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_3_u.png}}
+	\caption{График выходного сигнала регулятора $u(t)$ при возмущающем воздействии, изменяющемся по случайному закону.}
+	\label{3_3_u}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_3_y.png}}
+	\caption{График выходного сигнала системы $y(t)$ при возмущающем воздействии, изменяющемся по случайному закону.}
+	\label{3_3_y}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.95\linewidth]{pic/3_3_f.png}}
+	\caption{График возмущающего воздействия, изменяющегося по случайному закону $f(t)$.}
+	\label{3_3_f}
+\end{figure}
+
+\newpage
+\,
+\newpage
+\,
+\newpage
+\,
+\newpage
+Заметим, что в случае изменения задающего воздействия скачком система через определенное время вновь становится устойчивой относительно нового значения задающего воздействия. То же справедливо и для скачкообразного изменения возмущающего воздействия. В случае случайного возмущающего воздействия на систему, система стабилизируется около целевого значения $g(t)$ и остается ограниченным в условиях ограниченного возмущения.
 
 \endinput

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  7 NOV 2025 17:40
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  23 NOV 2025 19:21
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1585,14 +1585,107 @@ Package chemgreek Info: Activating mapping `fontspec' on line 174.
  (./1_title.tex) [1
 
 {C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (./0_main.toc
-) (./ch_1.tex [2]) (./ch_2.tex [3
+) (./ch_1.tex [2]
+<pic/1_schem.png, id=64, 913.011pt x 215.00325pt>
+File: pic/1_schem.png Graphic file (type png)
+<use pic/1_schem.png>
+Package luatex.def Info: pic/1_schem.png  used on input line 12.
+(luatex.def)             Requested size: 469.47049pt x 110.55566pt.
+) (./ch_2.tex [3
 
-])
-(./ch_3.tex [4
+<./pic/1_schem.png>]
+<pic/1_u.png, id=77, 500.3493pt x 290.5254pt>
+File: pic/1_u.png Graphic file (type png)
+<use pic/1_u.png>
+Package luatex.def Info: pic/1_u.png  used on input line 19.
+(luatex.def)             Requested size: 469.47049pt x 272.59741pt.
+<pic/1_y.png, id=78, 502.9992pt x 290.2845pt>
+File: pic/1_y.png Graphic file (type png)
+<use pic/1_y.png>
+Package luatex.def Info: pic/1_y.png  used on input line 24.
+(luatex.def)             Requested size: 469.47049pt x 270.94954pt.
 
-]) (./ch_4.tex [5
 
-]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./ch_3.tex [4
+
+<./pic/1_u.png>] [5<./pic/1_y.png>]
+<pic/3_1_u.png, id=104, 508.7808pt x 290.5254pt>
+File: pic/3_1_u.png Graphic file (type png)
+<use pic/3_1_u.png>
+Package luatex.def Info: pic/3_1_u.png  used on input line 11.
+(luatex.def)             Requested size: 445.99553pt x 254.68787pt.
+<pic/3_1_y.png, id=105, 503.2401pt x 290.5254pt>
+File: pic/3_1_y.png Graphic file (type png)
+<use pic/3_1_y.png>
+Package luatex.def Info: pic/3_1_y.png  used on input line 16.
+(luatex.def)             Requested size: 445.99553pt x 257.48512pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_1_g.png, id=106, 503.2401pt x 290.2845pt>
+File: pic/3_1_g.png Graphic file (type png)
+<use pic/3_1_g.png>
+Package luatex.def Info: pic/3_1_g.png  used on input line 21.
+(luatex.def)             Requested size: 445.99553pt x 257.2716pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_2_u.png, id=107, 503.2401pt x 290.5254pt>
+File: pic/3_2_u.png Graphic file (type png)
+<use pic/3_2_u.png>
+Package luatex.def Info: pic/3_2_u.png  used on input line 26.
+(luatex.def)             Requested size: 445.99553pt x 257.48512pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_2_y.png, id=108, 505.89pt x 290.2845pt>
+File: pic/3_2_y.png Graphic file (type png)
+<use pic/3_2_y.png>
+Package luatex.def Info: pic/3_2_y.png  used on input line 31.
+(luatex.def)             Requested size: 445.99553pt x 255.92065pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_2_f.png, id=109, 505.89pt x 290.5254pt>
+File: pic/3_2_f.png Graphic file (type png)
+<use pic/3_2_f.png>
+Package luatex.def Info: pic/3_2_f.png  used on input line 36.
+(luatex.def)             Requested size: 445.99553pt x 256.13304pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_3_u.png, id=110, 503.2401pt x 290.5254pt>
+File: pic/3_3_u.png Graphic file (type png)
+<use pic/3_3_u.png>
+Package luatex.def Info: pic/3_3_u.png  used on input line 41.
+(luatex.def)             Requested size: 445.99553pt x 257.48512pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_3_y.png, id=111, 509.2626pt x 290.5254pt>
+File: pic/3_3_y.png Graphic file (type png)
+<use pic/3_3_y.png>
+Package luatex.def Info: pic/3_3_y.png  used on input line 46.
+(luatex.def)             Requested size: 445.99553pt x 254.43518pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pic/3_3_f.png, id=112, 509.2626pt x 290.5254pt>
+File: pic/3_3_f.png Graphic file (type png)
+<use pic/3_3_f.png>
+Package luatex.def Info: pic/3_3_f.png  used on input line 51.
+(luatex.def)             Requested size: 445.99553pt x 254.43518pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6
+
+<./pic/3_1_u.png>] [7<./pic/3_1_y.png><./pic/3_1_g.png>] [8<./pic/3_2_u.png><./p
+ic/3_2_y.png>] [9<./pic/3_2_f.png><./pic/3_3_u.png>]) (./ch_4.tex [10<./pic/3_3_
+y.png><./pic/3_3_f.png>] [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1601,17 +1694,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) (./ch_5.tex [6
+) (./ch_5.tex [12
 
-]) (./ch_sum.tex [7
+]) (./ch_sum.tex [13
 
 ])
 
 LaTeX Warning: Empty bibliography on input line 192.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 83.
-See the caption package documentation for explanation.
 
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 84.
@@ -1621,7 +1710,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[8
+[14
 
 ]
 \tf@toc=\write6
@@ -1633,28 +1722,36 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_main.out' has not changed.
-(rerunfilecheck)             Checksum: 8D6A5BA6314B0A43BE4CE88614386610;2344.
+(rerunfilecheck)             Checksum: 74B4EB6E17BF0DF55E3BC8AA1298C1B1;2486.
 Package logreq Info: Writing requests to '0_main.run.xml'.
 
 \openout1 = 0_main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 29573 strings out of 476497
+ 29760 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1256 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 13 attribute, 199 glue_spe
-c, 8 attribute_list, 2 write nodes
-   avail lists: 1:4,2:490,3:118,4:42,5:315,6:48,7:2551,8:1,9:255,10:6,11:348
- 50997 multiletter control sequences out of 65536+600000
- 48 fonts using 12739679 bytes
+ 1285 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 21 attribute, 200 glue_spe
+c, 12 attribute_list, 2 write nodes
+   avail lists: 1:4,2:1380,3:299,4:122,5:315,6:61,7:2673,8:46,9:419,10:10,11:396
+
+ 51127 multiletter control sequences out of 65536+600000
+ 63 fonts using 15783583 bytes
  85i,11n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
 es.ttf><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi12.pfb>
-Output written on 0_main.pdf (8 pages, 122255 bytes).
+cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 0_main.pdf (14 pages, 831820 bytes).
 
-PDF statistics: 107 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 131072)
+ 73 words of extra memory for PDF output out of 10000 (max. 100000000)
 
