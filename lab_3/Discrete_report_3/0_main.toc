@@ -6,5 +6,5 @@
 \contentsline {chapter}{\chapternumberline {2}Настройка параметров дискретного регулятора}{4}{chapter.2}%
 \contentsline {chapter}{\chapternumberline {3}Исследование процессов на выходе дискретного регулятора и системы}{6}{chapter.3}%
 \contentsline {chapter}{\chapternumberline {4}Исследование влияния параметра $T$}{12}{chapter.4}%
-\contentsline {chapter}{\chapternumberline {5}Исследование влияния неточности компенсации полюсов}{13}{chapter.5}%
-\contentsline {chapter}{\chapternumberline {6}Вывод}{14}{chapter.6}%
+\contentsline {chapter}{\chapternumberline {5}Исследование влияния неточности компенсации полюсов}{14}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Вывод}{15}{chapter.6}%

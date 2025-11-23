@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  23 NOV 2025 19:21
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  23 NOV 2025 19:53
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1694,9 +1694,31 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
+<pic/4_2_u.png, id=151, 503.2401pt x 290.5254pt>
+File: pic/4_2_u.png Graphic file (type png)
+<use pic/4_2_u.png>
+Package luatex.def Info: pic/4_2_u.png  used on input line 18.
+(luatex.def)             Requested size: 445.99553pt x 257.48512pt.
+<pic/4_2_y.png, id=152, 505.89pt x 290.2845pt>
+File: pic/4_2_y.png Graphic file (type png)
+<use pic/4_2_y.png>
+Package luatex.def Info: pic/4_2_y.png  used on input line 23.
+(luatex.def)             Requested size: 445.99553pt x 255.92065pt.
+<pic/4_2_f.png, id=153, 505.89pt x 290.5254pt>
+File: pic/4_2_f.png Graphic file (type png)
+<use pic/4_2_f.png>
+Package luatex.def Info: pic/4_2_f.png  used on input line 28.
+(luatex.def)             Requested size: 445.99553pt x 256.13304pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./ch_5.tex [12
 
-]) (./ch_sum.tex [13
+<./pic/4_2_u.png>] [13<./pic/4_2_y.png><./pic/4_2_f.png>])
+(./ch_sum.tex [14
 
 ])
 
@@ -1710,7 +1732,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[14
+[15
 
 ]
 \tf@toc=\write6
@@ -1729,14 +1751,14 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29760 strings out of 476497
+ 29799 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1285 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 21 attribute, 200 glue_spe
-c, 12 attribute_list, 2 write nodes
-   avail lists: 1:4,2:1380,3:299,4:122,5:315,6:61,7:2673,8:46,9:419,10:10,11:396
+ 1315 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 31 attribute, 200 glue_spe
+c, 17 attribute_list, 2 write nodes
+   avail lists: 1:4,2:1365,3:299,4:122,5:324,6:61,7:2815,8:46,9:419,10:10,11:414
 
- 51127 multiletter control sequences out of 65536+600000
+ 51151 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
  85i,11n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
@@ -1749,9 +1771,9 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (14 pages, 831820 bytes).
+Output written on 0_main.pdf (15 pages, 1020191 bytes).
 
-PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 131072)
+PDF statistics: 225 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 131072)
  73 words of extra memory for PDF output out of 10000 (max. 100000000)
 
