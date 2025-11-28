@@ -1,4 +1,4 @@
-\chapter{Объект управления.}
+\chapter{Синтез апериодического регулятора.}
 \label{ch:chap1}
 
 \section{Цель работы}
@@ -11,13 +11,42 @@
 \begin{equation}
 	G(s) = \frac{e^{-as}}{1+bs} = \frac{e^{-2s}}{1+4s}
 \end{equation}
-%\begin{figure}[h]
-%\center{\includegraphics[width=1\linewidth]{pic/1_schem.png}}
-%\caption{Исследуемый объект управления.}
-%\label{1_schem}
-%\end{figure}
+Для непрерывного ОУ синтезируем апериодический регулятор. Период дискретизации $T=1$.
 
-
+Дискретизованная передаточная функция ОУ с ЭНП:
+\begin{multline}
+	HG(z) = Z \left\{\frac{1-e^{-sT}}{s} G(s)\right\} = \left(1 - z^{-1}\right) Z \left\{\frac{e^{-2s}}{s(1+4s)}\right\} =\\ =
+	\left(1 - z^{-1}\right) z^{-2}  Z \left\{\frac{1}{s(1+4s)}\right\} =
+		\left(1 - z^{-1}\right) z^{-2}  Z \left\{\frac{0.25}{s(0.25+s)}\right\} = \\ =
+			\left(1 - z^{-1}\right) z^{-2} \frac{z\left(1 - e^{-0.25}\right)}{(z-1) \left(z - e^{-0.25}\right)} =
+			\frac{z^{-2} \left(1 - e^{-0.25}\right)}{\left(z - e^{-0.25}\right)} = \\ =
+			\frac{z^{-3} \left(1 - e^{-0.25}\right)}{1 - e^{-0.25} z^{-1}} = \frac{1 - e^{-0.25}}{z^3 - e^{-0.25} z^{2}} \approx
+			\frac{0.2212}{z^3 - 0.7788z^2}
+\end{multline}
+Получим передаточную функцию регулятора
+\begin{multline}
+	D(z) = \frac{1}{HG(z)} \frac{T(z)}{1-T(z)} = \frac{1}{HG(z)} \frac{z^{-k}}{1 - z^{-k}} = \\ =
+	\frac{1 - e^{-0.25} z^{-1}}{z^{-3} \left(1 - e^{-0.25}\right)} \frac{z^{-3}}{1 - z^{-3}} =
+	\frac{z^3 - e^{-0.25} z^{2}}{ \left(1 - e^{-0.25}\right) \left(z^3 - 1\right)} \approx 
+	\frac{z^3 - 0.7788 z^{2}}{ 0.2212 \left(z^3 - 1\right)}
+\end{multline}
+Схема моделирования замкнутой системы с апериодическим регулятором и объектом управления представлена на рисунке \ref{1_schem}. Результаты моделирования работы системы: график управляющего воздействия и график выходного сигнала системы представлены на рисунках \ref{1_u} и \ref{1_y} соответственно.
+\begin{figure}[h]
+\center{\includegraphics[width=1\linewidth]{pic/1_schem.png}}
+\caption{Схема моделирования замкнутой системы с апериодическим регулятором.}
+\label{1_schem}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_u.png}}
+	\caption{График формируемого апериодическим регулятором управления $u(t)$.}
+	\label{1_u}
+\end{figure}
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{pic/1_y.png}}
+	\caption{График выходного сигнала $y(t)$ замкнутой системы с апериодическим регулятором.}
+	\label{1_y}
+\end{figure}
+На рисунке \ref{1_y} видно, что выход устанавливается через 3 периода дискретизации.
 
 
 
