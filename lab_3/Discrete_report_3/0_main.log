@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  23 NOV 2025 20:23
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  28 NOV 2025 12:18
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1781,7 +1781,7 @@ Here is how much of LuaTeX's memory you used:
  1357 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 45 attribute, 200 glue_spe
 c, 24 attribute_list, 2 write nodes
-   avail lists: 1:4,2:1344,3:299,4:122,5:386,6:61,7:3248,8:46,9:500,10:11,11:588
+   avail lists: 1:4,2:1344,3:299,4:122,5:386,6:61,7:3248,8:46,9:536,10:11,11:588
 
  51175 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
@@ -1796,7 +1796,7 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (17 pages, 1237360 bytes).
+Output written on 0_main.pdf (17 pages, 1237416 bytes).
 
 PDF statistics: 247 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 131072)
