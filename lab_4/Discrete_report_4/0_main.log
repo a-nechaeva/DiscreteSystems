@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  28 NOV 2025 17:47
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2025.6.20)  28 NOV 2025 18:51
  system commands enabled.
 **0_main.tex
 (./0_main.tex
@@ -1607,10 +1607,30 @@ Package luatex.def Info: pic/1_y.png  used on input line 45.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./ch_2.tex [4<./pic/1_schem.png><./pic/1_u.png>] [5<./pic/1_y.png>])
-(./ch_3.tex [6
+) (./ch_2.tex [4<./pic/1_schem.png><./pic/1_u.png>] [5<./pic/1_y.png>] [6
 
-]) (./ch_sum.tex [7
+]
+<pic/2_schem.png, id=98, 923.8515pt x 225.84375pt>
+File: pic/2_schem.png Graphic file (type png)
+<use pic/2_schem.png>
+Package luatex.def Info: pic/2_schem.png  used on input line 42.
+(luatex.def)             Requested size: 469.47049pt x 114.76524pt.
+<pic/2_u.png, id=99, 550.2156pt x 290.5254pt>
+File: pic/2_u.png Graphic file (type png)
+<use pic/2_u.png>
+Package luatex.def Info: pic/2_u.png  used on input line 47.
+(luatex.def)             Requested size: 469.47049pt x 247.90086pt.
+<pic/2_y.png, id=100, 505.89pt x 290.5254pt>
+File: pic/2_y.png Graphic file (type png)
+<use pic/2_y.png>
+Package luatex.def Info: pic/2_y.png  used on input line 52.
+(luatex.def)             Requested size: 469.47049pt x 269.61397pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./ch_3.tex [7<./pic/2_schem.png><./pic/2_u.png>] [8<./pic/2_y.png>])
+(./ch_sum.tex [9
 
 ])
 
@@ -1624,7 +1644,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
-[8
+[10
 
 ]
 \tf@toc=\write6
@@ -1643,26 +1663,28 @@ Package logreq Info: Writing requests to '0_main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29619 strings out of 476497
+ 29664 strings out of 476497
  125061,1977958 words of node,token memory allocated
- 1285 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 21 attribute, 200 glue_spe
-c, 12 attribute_list, 2 write nodes
-   avail lists: 1:3,2:1134,3:214,4:60,5:469,6:48,7:3512,8:93,9:870,10:10,11:362
- 51038 multiletter control sequences out of 65536+600000
+ 1357 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 45 attribute, 200 glue_spe
+c, 24 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1098,3:214,4:60,5:536,6:48,7:3512,8:104,9:897,10:10,11:362
+
+ 51062 multiletter control sequences out of 65536+600000
  63 fonts using 15783583 bytes
- 85i,11n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,12n,91p,1150b,3113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/timesbd.ttf><C:/Windows/Fonts/timesi.ttf><C:/Windows/Fonts/tim
 es.ttf><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmmi12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 0_main.pdf (8 pages, 297471 bytes).
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 0_main.pdf (10 pages, 435614 bytes).
 
-PDF statistics: 137 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 131072)
+PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 131072)
  57 words of extra memory for PDF output out of 10000 (max. 100000000)
 
